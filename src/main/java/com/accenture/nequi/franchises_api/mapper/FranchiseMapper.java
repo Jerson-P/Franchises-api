@@ -17,7 +17,7 @@ import com.accenture.nequi.franchises_api.entities.Product;
 @Component
 public class FranchiseMapper {
 
-    // Método para mapear DTO a entidad
+    // Métodos para mapear DTO a entidad
     public Franchise mapToEntityFranchise(FranchiseRequestDTO dto) {
         Franchise franchise = new Franchise();
         franchise.setName(dto.getName());
@@ -43,7 +43,7 @@ public class FranchiseMapper {
         return product;
     }
 
-    // Método para mapear entidad a DTO
+    // Métodos para mapear entidad a DTO
     public FranchiseResponseDTO mapToResponseDTOFrancise(Franchise franchise) {
         FranchiseResponseDTO dto = new FranchiseResponseDTO();
         dto.setId(franchise.getId());
