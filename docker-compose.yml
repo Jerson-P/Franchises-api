@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  franchise-api:
+    build: .
+    container_name: franchise-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb+srv://adminMongo:IaSLhn48cnwwmd3g@clusterdb.lexwh.mongodb.net/franchiseDB?retryWrites=true&w=majority&appName=ClusterDB
+      SPRING_PROFILES_ACTIVE: docker
