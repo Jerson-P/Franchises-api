@@ -35,11 +35,11 @@ Este proyecto proporciona una API para manejar una lista de franquicias, sucursa
 
 1. Clona el repositorio:
    ```bash
-   git clone <url-del-repositorio>
-   cd <nombre-del-proyecto>```
+   git clone https://github.com/Jerson-P/Franchises-api.git
+   cd Franchises-api
 
    
-2. Compila el proyecto usando Gradle:
+2. Compila el proyecto desde la consola usando Gradle:
    `./gradlew clean build`
    
 3. Ejecuta la aplicación:
@@ -49,14 +49,14 @@ Este proyecto proporciona una API para manejar una lista de franquicias, sucursa
 
 1. Clona el repositorio:
    ```bash
-   git clone <url-del-repositorio>
-   cd <nombre-del-proyecto>```
+   git clone https://github.com/Jerson-P/Franchises-api.git
+   cd Franchises-api
 
    
-2. Compila el proyecto usando Gradle:
+2. Compila el proyecto desde la consola usando Gradle:
    `./gradlew clean build`
    
-3. Construye la imagen Docker y levanta los contenedores con Docker Compose:
+3. Desde la consola construye la imagen Docker y levanta los contenedores con Docker Compose:
 	`docker-compose up --build`
 
 ## En los dos casos la aplicación estará disponible en http://localhost:8080
