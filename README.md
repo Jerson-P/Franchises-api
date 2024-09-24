@@ -36,7 +36,7 @@ Este proyecto proporciona una API para manejar una lista de franquicias, sucursa
 1. Clona el repositorio:
    ```bash
    git clone <url-del-repositorio>
-   cd <nombre-del-proyecto>```
+   cd <nombre-del-proyecto>
 
    
 2. Compila el proyecto usando Gradle:
