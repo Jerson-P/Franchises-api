@@ -60,6 +60,7 @@ Este proyecto proporciona una API para manejar una lista de franquicias, sucursa
 	`docker-compose up --build`
 
 ## En los dos casos la aplicación estará disponible en http://localhost:8080
+## Para documentación de consumo de los servicios revisa el archivo API_Documentation.md
 
 
 
