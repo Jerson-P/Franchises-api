@@ -1,29 +1,57 @@
-# Gestión de Reservas - Sistema de Vuelos
+# API de Franquicias
 
-Este proyecto es un sistema de gestión de reservas de vuelos, desarrollado en Java utilizando Spring Boot. El proyecto incluye funcionalidades para la búsqueda de vuelos, reservas y otras operaciones relacionadas con la gestión de vuelos.
+Este proyecto proporciona una API para manejar una lista de franquicias, sucursales y productos en Spring Boot. Permite realizar operaciones como agregar, eliminar y modificar franquicias, sucursales y productos, así como consultar el producto con mayor stock.
 
 ## Requisitos
 
-### Software Necesario
-- **JDK 17**
-- **Maven 3.6.3** o superior.
-- **Base de datos SQL Server** (o cualquier base de datos compatible con JPA).
+- Java 17
+- Docker
+- Gradle
+- Sistema de persistencia (MongoDB)
 
-### Dependencias del Proyecto
-Las dependencias principales que el proyecto utiliza están definidas en el archivo `pom.xml`. Algunas importantes incluyen:
-- Spring Boot Starter Web
-- Spring Boot Starter Data JPA
-- SQL Server Driver para la conexión con bases de datos SQL Server
-- Swagger para la documentación de API
+## Endpoints
 
-## Configuración del Proyecto
+### Franquicias
 
-### Clonar el Proyecto
-1. Puedes clonar el repositorio desde el control de versiones (Git):
+- **POST** `/franchises`: Agrega una nueva franquicia.
+- **PUT** `/franchises/{franchiseId}/name`: Actualiza el nombre de una franquicia.
 
-```bash
-git clone https://github.com/Jerson-P/prueba-bigview-api.git
-cd prueba-bigview-api
+### Sucursales
+
+- **POST** `/franchises/{franchiseId}/branches`: Agrega una nueva sucursal a una franquicia.
+- **PUT** `/franchises/{franchiseId}/branches/{branchId}/name`: Actualiza el nombre de una sucursal.
+
+### Productos
+
+- **POST** `/franchises/{franchiseId}/branches/{branchId}/products`: Agrega un nuevo producto a una sucursal.
+- **PUT** `/franchises/{franchiseId}/branches/{branchId}/products/{productId}/stock`: Actualiza el stock de un producto.
+- **PUT** `/franchises/{franchiseId}/branches/{branchId}/products/{productId}/name`: Actualiza el nombre de un producto.
+- **GET** `/franchises/{franchiseId}/branches/{branchName}/products/max-stock`: Devuelve el producto con mayor stock en una sucursal.
+- **DELETE** `/franchises/{franchiseId}/branches/{branchName}/products/{productName}`: Elimina un producto de una sucursal.
+
+## Instrucciones para correr el proyecto
+
+### Ejecutar en local
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Jerson-P/Franchises-api.git
+   cd Franchises-api
+
+   
+2. Compila el proyecto desde la consola usando Gradle:
+   `./gradlew clean build`
+   
+3. Ejecuta la aplicación:
+	`./gradlew bootRun`
+	
+### Ejecutar con DOCKER
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Jerson-P/Franchises-api.git
+   cd Franchises-api
+
    
 2. Compila el proyecto desde la consola usando Gradle:
    `./gradlew clean build`
@@ -33,6 +61,4 @@ cd prueba-bigview-api
 
 ## En los dos casos la aplicación estará disponible en http://localhost:8080
 ## Para documentación de consumo de los servicios revisa el archivo API_Documentation.md
-
-
 
